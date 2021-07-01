@@ -30,18 +30,18 @@ func main() {
 		c.JSON(200, res)
 	})
 
-	// router.GET("/.well-known/apple-app-site-association", func(c *gin.Context) {
-	// 	appclips := map[string]interface{}{
-	// 		"apps": []interface{}{
- //        		"9HC298K985.com.orlov.cvapp.Clip",
- //    		},
-	// 	}
-	// 	result := map[string]interface{}{
- //    		"appclips": appclips,
-	// 	}
-	// 	c.Header("Content-Type", "application/pkcs7-mime")
-	// 	c.JSON(200, result)
-	// })	
+	router.GET("/.well-known/apple-app-site-association", func(c *gin.Context) {
+		appclips := map[string]interface{}{
+			"apps": []interface{}{
+        		"9HC298K985.com.orlov.cvapp.Clip",
+    		},
+		}
+		result := map[string]interface{}{
+    		"appclips": appclips,
+		}
+		c.Header("Content-Type", "application/json")
+		c.JSON(200, result)
+	})	
 
 	router.Run(":" + port)
 }
