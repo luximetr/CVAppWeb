@@ -22,4 +22,8 @@ $app->get('/', function() use($app) {
   return $app['twig']->render('index.twig');
 });
 
+$app->get('.well-known/apple-app-site-association', function() use($app) {
+  return {'user': 'demo'};
+});
+
 $app->run();
