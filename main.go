@@ -39,6 +39,7 @@ func main() {
 		result := map[string]interface{}{
     		"appclips": appclips,
 		}
+		c.Header("Content-Type", "application/json")
 		c.JSON(200, result)
 	})	
 
