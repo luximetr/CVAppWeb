@@ -39,7 +39,7 @@ func main() {
         		"Morticia",
     		},
 		}
-		c.JSON(200, res)
+		c.JSON(200, result)
 	})	
 
 	router.Run(":" + port)
