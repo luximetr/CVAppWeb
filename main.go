@@ -31,7 +31,14 @@ func main() {
 	})
 
 	router.GET("/.well-known/apple-app-site-association", func(c *gin.Context) {
-		res := []string{"foo", "bar"}
+		result = map[string]interface{} {
+			"Name": "Wednesday",
+    		"Age":  6,
+    		"Parents": []interface {
+        		"Gomez",
+        		"Morticia",
+    		}
+		}
 		c.JSON(200, res)
 	})	
 
