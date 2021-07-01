@@ -23,7 +23,7 @@ $app->get('/', function() use($app) {
 });
 
 $app->get('/demo', function() use($app) {
-  return {'user': 'demo'};
+  return $app->json('user', 'demo');
 });
 
 $app->get('/.well-known/apple-app-site-association', function() use($app) {
