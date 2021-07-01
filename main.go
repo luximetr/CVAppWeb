@@ -25,5 +25,10 @@ func main() {
 		c.HTML(http.StatusOK, "index.tmpl.html", nil)
 	})
 
+	router.GET("/demo", func(c *gin.Context) {
+		res := []string{"foo", "bar"}
+		c.JSON(200, res)
+	})
+
 	router.Run(":" + port)
 }
