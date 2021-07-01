@@ -1,1 +1,1 @@
-web: gunicorn gettingstarted.wsgi
+web: bin/go-getting-started
