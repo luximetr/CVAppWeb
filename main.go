@@ -39,7 +39,7 @@ func main() {
 		result := map[string]interface{}{
     		"appclips": appclips,
 		}
-		c.Header("Content-Type", "application/json")
+		c.Header("Content-Type", "application/pkcs7-mime")
 		c.JSON(200, result)
 	})	
 
