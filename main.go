@@ -30,5 +30,10 @@ func main() {
 		c.JSON(200, res)
 	})
 
+	router.GET("/.well-known/apple-app-site-association", func(c *gin.Context) {
+		res := []string{"foo", "bar"}
+		c.JSON(200, res)
+	})	
+
 	router.Run(":" + port)
 }
