@@ -32,7 +32,7 @@ func main() {
 
 	router.GET("/.well-known/apple-app-site-association", func(c *gin.Context) {
 		result := map[string]interface{}{
-    		"appclips": interface{} {
+    		"appclips": map[string]interface{} {
     			"apps": []interface{} {
     				"9HC298K985.com.orlov.cvapp.Clip"
     			}
