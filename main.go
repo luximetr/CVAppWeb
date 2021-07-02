@@ -20,7 +20,7 @@ func main() {
 	router.Use(gin.Logger())
 	router.LoadHTMLGlob("templates/*.tmpl.html")
 	router.Static("/static", "static")
-	router.StaticFile("/.well-known/apple-app-site-association", "./static/apple-app-site-association")
+	router.Static("/.well-known", ".well-known")
 
 	router.GET("/", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index.tmpl.html", nil)
