@@ -32,17 +32,29 @@ func main() {
 	})
 
 	router.GET("/.well-known/apple-app-site-association", func(c *gin.Context) {
-		// appclips := map[string]interface{}{
-		// 	"apps": []interface{}{
-  //       		"9HC298K985.com.orlov.cvapp.Clip",
-  //   		},
-		// }
-		// result := map[string]interface{}{
-  //   		"appclips": appclips,
-		// }
+		details := map[string]interface{}{
+			"appID": "9HC298K985.com.orlov.cvapp",
+			"paths": []interface{}{
+        		"*",
+    		},
+		}
+		applinks := map[string]interface{}{
+			"apps": []interface{} {},
+			"details": details
+		}
+		appclips := map[string]interface{}{
+			"apps": []interface{}{
+        		"9HC298K985.com.orlov.cvapp.Clip",
+    		},
+		}
+
+		result := map[string]interface{}{
+			"applinks": applinks,
+    		"appclips": appclips,
+		}
+		
 		c.Header("Content-Type", "application/json")
-		c.File("/.well-known/apple-app-site-association")
-		// c.JSON(200, result)
+		c.JSON(200, result)
 	})	
 
 	router.Run(":" + port)
