@@ -44,7 +44,7 @@ func main() {
 		}
 		appclips := map[string]interface{}{
 			"apps": []interface{}{
-        		"9HC298K985.com.orlov.cvapp.Clip",
+        		"8C7439RJLG.br.com.guilhermerambo.Chibi-Studio.Clip",
     		},
 		}
 
