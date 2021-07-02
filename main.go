@@ -40,7 +40,7 @@ func main() {
 		}
 		applinks := map[string]interface{}{
 			"apps": []interface{} {},
-			"details": details
+			"details": details,
 		}
 		appclips := map[string]interface{}{
 			"apps": []interface{}{
@@ -52,7 +52,7 @@ func main() {
 			"applinks": applinks,
     		"appclips": appclips,
 		}
-		
+
 		c.Header("Content-Type", "application/json")
 		c.JSON(200, result)
 	})	
